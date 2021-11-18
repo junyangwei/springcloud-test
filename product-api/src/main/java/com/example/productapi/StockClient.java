@@ -12,4 +12,7 @@ public interface StockClient {
 
     @GetMapping("/stockapi/test")
     String test();
+
+    @GetMapping("/stockapi/create_stock")
+    String createStock();
 }
