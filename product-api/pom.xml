@@ -16,6 +16,10 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud>3.0.3</spring-cloud>
+        <hmily-version>2.1.1</hmily-version>
+		<hystrix-version>1.5.18</hystrix-version>
+		<slf4j-version>1.7.32</slf4j-version>
+		<mysql-version>8.0.26</mysql-version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -47,6 +51,34 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 			<version>${spring-cloud}</version>
+		</dependency>
+
+		<!-- 引入 Hmily 依赖 -->
+		<dependency>
+			<groupId>org.dromara</groupId>
+			<artifactId>hmily-spring-boot-starter-springcloud</artifactId>
+			<version>${hmily-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.netflix.hystrix</groupId>
+			<artifactId>hystrix-core</artifactId>
+			<version>${hystrix-version}</version>
+		</dependency>
+
+		<!-- 引入 Hmily 兼容的日志打印依赖，方便打印错误日志 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- 引入 mysql 连接，连接 MySQL 数据库 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-version}</version>
 		</dependency>
 
 	</dependencies>
