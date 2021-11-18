@@ -12,6 +12,10 @@ public class StockServiceImpl implements StockService {
     @Override
     public boolean createStock() {
         System.out.println("Begin create stock...");
+        // 模拟分布式调用失败场景
+//        if (true) {
+//            throw new RuntimeException("错误测试，哈哈哈哈");
+//        }
         return true;
     }
 
