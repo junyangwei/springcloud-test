@@ -1,0 +1,15 @@
+server:
+  port: 8001
+  servlet:
+    context-path: /productapi
+
+spring:
+  application:
+    # 其他服务调用本服务的时候，就需要用到这个名称
+    name: product-service
+
+# 配置服务注册 eureka server 地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
